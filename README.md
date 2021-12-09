@@ -8,4 +8,6 @@ The problems are individualy available in the directory "problems".
 
 It is possible to upload all problems at once as "OPM.tar.gz".
 
+Documentation in gt23.pdf.
+
 Authors: Serge Gratton and Philippe Toint
