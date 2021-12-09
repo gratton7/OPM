@@ -4,4 +4,8 @@ OPM is a small collection of CUTEst unconstrained and bound-constrained nonlinea
 optimization problems, which can be used in Matlab for testing optimization algorithms
 directly (i.e. without installing additional software).
 
+The problems are individualy available in the directory problems.
+
+It is possible to upload all problems at ones as OPM.tar.gz
+
 Authors: Serge Gratton and Philippe Toint
