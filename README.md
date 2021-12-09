@@ -6,6 +6,6 @@ directly (i.e. without installing additional software).
 
 The problems are individualy available in the directory "problems".
 
-It is possible to upload all problems at ones as "OPM.tar.gz"
+It is possible to upload all problems at ones as "OPM.tar.gz".
 
 Authors: Serge Gratton and Philippe Toint
