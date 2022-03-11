@@ -12,7 +12,7 @@ function  varargout = chebyqad( action, varargin )
 %      J.J. More', B.S. Garbow and K.E. Hillstrom,
 %      "Testing Unconstrained Optimization Software",
 %      ACM Transactions on Mathematical Software, vol. 7(1), pp. 17-41, 1981.
-%   Alsso problem 58 in 
+%   Also problem 58 in 
 %      A.R. Buckley,
 %      "Test functions for unconstrained minimization",
 %      TR 1989CS-3, Mathematics, statistics and computing centre,
@@ -106,22 +106,37 @@ case 'elobjf' % varargout = [ fiel, giel, Hiel ]
 
 case 'chebpol' % The i-th shifted Chebychev polynomial at x
 
-   i     = varargin{1};
-   x     = varargin{2};
-   t     = 2 * x - 1;
-   y     = 1 - t^2;
-   s     = sqrt( y );
-   acosx = i * acos( t );
-   cosac = cos( acosx );
-   varargout{1} = cosac;
-   if ( nargout > 1 )
-      sinac = sin( acosx );
-      varargout{2} = 2 * i * sinac / s;
-      if ( nargout > 2 )
-         varargout{3} = 4 * i * ( sinac * t / s - i * cosac ) / y;
+   i  = varargin{1};
+   x  = varargin{2};
+   T0 = [ 1 2*x-1 ];
+   U0 = [ 1 4*x-2 ];
+   T1 = [ 0 2 ];
+   T2 = [ 0 0 ];
+   for j = 3:i+1
+      n = j-1;
+      t = 2*x-1;
+      T0(j) = 2*t*T0(n) - T0(n-1);
+      U0(j) = 2*t*U0(n) - U0(n-1);
+      if ( nargout > 1 )
+         T1(j) = 2*n*U0(j-1);
+	 if ( nargout > 2 )
+	    if ( t == 1 )
+	       T2(j) = 4*( n^4 - n^2)/3;
+	    elseif ( t == -1 )
+	       T2(j) = 4*(-1)^n*((n^4 - n^2)/3);
+	    else
+	       T2(j) = 4*n*(j*T0(j)-U0(j))/(t^2-1);
+	    end
+         end
       end
    end
-   
+   varargout{1} = T0(end);%D
+   if ( nargout > 1 )
+      varargout{2} = T1(end);
+      if ( nargout > 2 )
+         varargout{3} = T2(end);
+      end
+   end
 end
 
 return
