@@ -91,7 +91,7 @@ case 'elobjf' % varargout = [ fiel, giel, Hiel ]
          riel = riel + fs; 
       else
          for j = 1:ny
-            flj  = ncb20( '3p', [ x(j) x(ny+j) x(n-ny+j) ] );
+            flj  = ncb20( '3p', [ x(j) x(ny+j) x(ny+ny+j) ] );
             riel = riel + cond * flj;
 	 end
       end
@@ -111,7 +111,7 @@ case 'elobjf' % varargout = [ fiel, giel, Hiel ]
 	 Jiel = gs;
       else
          for j = 1:ny
-	    ii = [ j ny+j n-ny+j ];
+	    ii = [ j ny+j ny+ny+j ];
             [ flj, glj ] = ncb20( '3p', x(ii) );
             riel     = riel     + cond * flj;
 	    Jiel(ii) = Jiel(ii) + cond * glj;
