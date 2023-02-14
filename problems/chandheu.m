@@ -47,6 +47,7 @@ case 'cpsstr'
 %  Discretization points (X(I)) and weights (W(I)) for the considered
 %  quadrature rule on [0,1]
 
+   eldom = cell( n, 1 );
    for iel = 1:n
       eldom{iel} = [ 1:n ];
    end

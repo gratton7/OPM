@@ -21,9 +21,6 @@ function  varargout = beale( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-pname   = 'beale';
-problem = str2func( pname );
-
 switch ( action )
 
 case 'setup' % varargout = [ x0, fstar, xtype, xlower, xupper, clower, cupper, class, error ]
@@ -52,7 +49,7 @@ case 'objf'   % varargout = [ f, g, H ]
 
 case 'elobjf' % varargout = [ fiel, giel, Hiel ]
 
-   iel  = varargin{1};
+%  iel  = varargin{1};
    x    = varargin{2};
    r1 = 1.5   - x(1) * ( 1 - x(2)   );
    r2 = 2.25  - x(1) * ( 1 - x(2)^2 );

@@ -103,7 +103,7 @@ case 'elobjf' % varargout = [ fiel, giel, Hiel ]
 	    end
 	 end
       case 0
-         i    = iel / 2 + 1;
+%         i    = iel / 2 + 1;
 	 ci   = exp(-1/10);
 	 ei   = exp(x(1)/10);
 	 riel = ei-ci;

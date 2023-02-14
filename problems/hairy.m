@@ -53,7 +53,6 @@ case 'objf'   % varargout = [ f, g, H ]
 
 case 'elobjf' % varargout = [ fiel, giel, Hiel ]
 
-   iel    = varargin{1};
    x      = varargin{2};
    dens   = 7;
    smooth = 0.01;

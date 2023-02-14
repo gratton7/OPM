@@ -53,6 +53,7 @@ case 'setup' % varargout = [ x0, fstar, xtype, xlower, xupper, clower, cupper, c
 case 'cpsstr'
    n     = varargin{1};
    m     = n / 3;
+   eldom = cell( n, 1 );
    for i = 1:n
       irange = [ i ];
       if ( i < n )

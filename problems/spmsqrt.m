@@ -19,8 +19,7 @@ function  varargout = spmsqrt( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname   = 'spmsqrt';
 problem = str2func( pname );
 
 switch ( action )
@@ -151,7 +150,7 @@ case 'cpsstr'
    A = B*B;
    a = [];
    for j = 1:m
-      a = [ a;  A(max(1,j-2):min(j+2,m),j) ];
+      a = [ a; A(max(1,j-2):min(j+2,m),j) ];
    end
 
    cpsstr.name  = pname;

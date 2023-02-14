@@ -64,7 +64,6 @@ case 'objf'   % varargout = [ f, g, H ]
 
 case 'elobjf' % varargout = [ fiel, giel, Hiel ]
 
-   iel = varargin{1};
    x   = varargin{2};
    aux = x(1) * x(2) - 2 * x(2);
    varargout{1}  = ( x(1)- 2 )^4 + aux^2 + ( x(2) + 1 )^2;

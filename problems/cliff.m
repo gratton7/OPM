@@ -51,7 +51,6 @@ case 'objf'   % varargout = [ f, g, H ]
 
 case 'elobjf' % varargout = [ fiel, giel, Hiel ]
 
-   iel  = varargin{1};
    x    = varargin{2};
    ee   = exp(20*(x(1)-x(2)));
    varargout{1} = ((x(1)-3)/100)^2 - (x(1) - x(2)) + ee;

@@ -51,6 +51,7 @@ case 'setup' % varargout = [ x0, fstar, xtype, xlower, xupper, clower, cupper, c
 case 'cpsstr'
 
    n       = varargin{1};
+   eldom   = cell( n-1, 1 );
    for iel = 2:n
       eldom{ iel-1 } = [ iel 1 ];
    end
@@ -71,7 +72,6 @@ case 'objf'   % varargout = [ f, g, H ]
 
 case 'elobjf' % varargout = [ fiel, giel, Hiel ]
 
-   iel  = varargin{1};
    x    = varargin{2};
    r1   = 10*(x(2)-x(1)^2);
    r2   = 1-x(1);

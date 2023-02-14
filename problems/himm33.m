@@ -16,9 +16,7 @@ function  varargout = himm33( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
-problem = str2func( pname );
+pname   = 'himm33';
 
 switch ( action )
 

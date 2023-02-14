@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-function  varargout = nondquar( action, varargin )
+function  varargout = expfit( action, varargin )
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -44,6 +44,7 @@ case 'setup' % varargout = [ x0, fstar, xtype, xlower, xupper, clower, cupper, c
 
 case 'cpsstr'
 
+   eldom = cell( 10, 1 );
    for iel = 1:10  % number of points
       eldom{iel} = [ 1 2 ];
    end
@@ -68,7 +69,6 @@ case 'elobjf' % varargout = [ fiel, giel, Hiel ]
    iel   = varargin{1};
    x     = varargin{2};
    h     = varargin{3};
-   riel  = iel*h^2;
    switch( nargout )
    case 1
       riel = expfit( 'expf', x, iel*h );

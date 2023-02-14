@@ -31,13 +31,13 @@ case 'setup' % varargout = [ x0, fstar, xtype, xlower, xupper, clower, cupper, c
       if ( n < 2 || round(sqrt(1+4*n)) ~= sqrt(1+4*n) )
          disp( [ ' ERROR in eigenals: n = ', int2str(n), ' is < 2!' ] )
       end
-      p   = 0.5*(sqrt(1+4*n)-1);
-      if ( abs( round( p ) - p ) > 1.e-15 )
-         disp( [ ' ERROR in eigenals: n = ', int2str(n), ' is not such that 0.5*(sqrt(1+4*n)-1) is integer!' ] )
-      end
    else
       n = 110;
       p = 10;
+   end
+   p   = 0.5*(sqrt(1+4*n)-1);
+   if ( abs( round( p ) - p ) > 1.e-15 )
+      disp( [ ' ERROR in eigenals: n = ', int2str(n), ' is not such that 0.5*(sqrt(1+4*n)-1) is integer!' ] )
    end
    Q = speye(p);
    varargout{1} = full([ Q(:); ones(p,1) ]);      % x0

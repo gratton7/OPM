@@ -96,7 +96,7 @@ case 'setup' % varargout = [ x0, fstar, xtype, xlower, xupper, clower, cupper, c
          end
       else
 	 ii          = (iy-1)*nsq+1;
-	 t           = (iy-1)*h;
+%        t           = (iy-1)*h;
          x0( ii )    = 0;
 	 ii          = iy*nsq;
          x0( ii )    = 0;
@@ -180,7 +180,6 @@ case 'objf'   % varargout = [ f, g, H ]
 
 case 'elobjf' % varargout = [ fiel, giel, Hiel ]
 
-   iel   = varargin{1};
    x     = varargin{2};
    n     = varargin{3};
    nel   = (sqrt(n)-1)^2;
@@ -206,7 +205,7 @@ case 'innerprod'
    y = varargin{2};
    nsq   = sqrt(length(x));
    if ( round (nsq) ~= nsq )
-      varargin{1} = NaN;
+      varargout{1} = NaN;
       disp( ' ERROR in tcontact-innerprod: dimension is not square!' )
       return
    end
@@ -247,7 +246,7 @@ case 'M-matrix'
    n   = varargin{1};
    nsq = sqrt(n);
    if ( round (nsq) ~= nsq )
-      varargin{1} = NaN;
+      varargout{1} = NaN;
       disp( ' ERROR in tcontact-Mmatrix: dimension is not square!' )
       return
    end

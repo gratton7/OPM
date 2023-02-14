@@ -72,7 +72,6 @@ case 'elobjf' % varargout = [ fiel, giel, Hiel ]
 
    iel   = varargin{1};
    x     = varargin{2};
-   n     = length( x );
    eldom = varargin{3};
    scalx = varargin{4}(eldom{iel});
    x     = x .* scalx;

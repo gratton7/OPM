@@ -68,7 +68,6 @@ case 'elobjf' % varargout = [ fiel, giel, Hiel ]
    if ( nargout > 1 )
       aexpma = a * expma;
       lnymx2 = log(abs(ymx2));
-      piel   = a*expma;
       Jiel = [ aexpma/x(1); x(3)*aexpma/ymx2; -aexpma*lnymx2];
       varargout{2} = 2 * Jiel * riel;
       if ( nargout > 2 )

@@ -133,7 +133,7 @@ case 'objf'   % varargout = [ f, g, H ]
    
 case 'elobjf' % varargout = [ fiel, giel, Hiel ]
 
-   iel   = varargin{1};
+%  iel   = varargin{1};
    x     = varargin{2};
    n     = varargin{3};
    nel   = (sqrt(n)-1)^2;
@@ -159,7 +159,7 @@ case 'innerprod'
    y   = varargin{2};
    nsq = sqrt( length( x ) );
    if ( round (nsq) ~= nsq )
-      varargin{1} = NaN;
+      varargout{1} = NaN;
       disp( ' ERROR in tnlminsurfx-innerprod: dimension is not square!' )
       return
    end
@@ -198,7 +198,7 @@ case 'M-matrix'
    n   = varargin{1};
    nsq = sqrt(n);
    if ( round (nsq) ~= nsq )
-      varargin{1} = NaN;
+      varargout{1} = NaN;
       disp( ' ERROR in tnlminsurfx-Mmatrix: dimension is not square!' )
       return
    end

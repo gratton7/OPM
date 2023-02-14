@@ -46,7 +46,6 @@ case 'setup' % varargout = [ x0, fstar, xtype, xlower, xupper, clower, cupper, c
    else
       n = 12;
    end
-   m = n/4;
    varargout{1}(1:2:n-1,1) = -3 * ones( n/2, 1 ); % x0
    varargout{1}(2:2:n,1)   = -1 * ones( n/2, 1 ); % x0
    varargout{2} = 0;                              % fstar
@@ -61,6 +60,7 @@ case 'cpsstr'
 
    m  = varargin{1} / 4;
    ie = 1;
+   eldom = cell( m+6, 1 );
    for iel = 1:m
       eldom{ ie }     = [ 4*iel-3 4*iel-2 ];
       eldom{ ie + 1 } = [ 4*iel-3 ];

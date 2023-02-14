@@ -42,7 +42,7 @@ case 'setup' % varargout = [ x0, fstar, xtype, xlower, xupper, clower, cupper, c
    else
       n = 12;
    end
-   t            = [1:n-2]'/(n-1);
+%  t            = [1:n-2]'/(n-1);
 %  varargout{1} = [ 0; t.*(t-1); 0 ];           % the standard x0
    varargout{1} = [ 0; ones(n-2,1);0 ];         % the modified x0
    varargout{2} = 0;                            % fstar

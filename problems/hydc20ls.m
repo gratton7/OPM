@@ -18,8 +18,7 @@ function  varargout = hydc20ls( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname   = 'hydc20ls';
 problem = str2func( pname );
 nn      = 20;
 mm      = 3;
@@ -34,8 +33,6 @@ case 'setup' % varargout = [ x0, fstar, xtype, xlower, xupper, clower, cupper, c
       if ( n ~= 99 )
          disp( [ ' ERROR in hydc20ls: n = ', int2str(n), ' is not equal to 99!' ] )
       end
-   else
-      n = 99;        % the number of discretization points
    end
 
 %   Note: the correspondance between the SIF file variables and the present
@@ -218,7 +215,7 @@ case 'elobjf' % varargout = [ fiel, giel, Hiel ]
 	 varargout{3}    = 2*(Jiel*Jiel' + riel*Hiel);
       end
    elseif ( iel <= mm*nn )
-      i = floor( ( iel-2*mm)/mm );
+%      i = floor( ( iel-2*mm)/mm );
 %      if ( i == kk )
 %         riel = - fl(j);
 %      elseif ( i == kk+1 )
@@ -280,7 +277,7 @@ case 'elobjf' % varargout = [ fiel, giel, Hiel ]
 	 varargout{3}    = 0.0002*(Jiel*Jiel' + riel*Hiel);
       end
     elseif ( iel <= (mm+1)*nn )
-      i = iel-mm*nn;
+%      i = iel-mm*nn;
       switch( nargout )
       case 1
          riel = -1;

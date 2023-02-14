@@ -46,8 +46,9 @@ case 'setup' % varargout = [ x0, fstar, xtype, xlower, xupper, clower, cupper, c
 
 case 'cpsstr'
 
-   m  = varargin{1} / 13;
-   nel = 1;
+   m     = varargin{1} / 13;
+   nel   = 1;
+   eldom = cell( m+4, 1 );
    for iel = 1:m
       eldom{ nel }     = [ iel iel+1 iel+2 ];
       eldom{ nel + 1 } = [ iel+1 iel+2 iel+3 iel+4 iel+5 iel+6 ];

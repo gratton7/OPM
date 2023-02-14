@@ -39,6 +39,7 @@ case 'setup' % varargout = [ x0, fstar, xtype, xlower, xupper, clower, cupper, c
 
 case 'cpsstr'
 
+   eldom = cell( 13, 1 );
    for iel = 1:13
       eldom{ iel } = [ 1:6 ];
       ti = iel / 10;
@@ -61,7 +62,6 @@ case 'objf'   % varargout = [ f, g, H ]
 
 case 'elobjf' % varargout = [ fiel, giel, Hiel ]
 
-   iel  = varargin{1};
    x    = varargin{2};
    y    = varargin{3};
    fiel = 0;
@@ -82,7 +82,7 @@ case 'elobjf' % varargout = [ fiel, giel, Hiel ]
 		     0,               ti*exp(-x(2)*ti),         0,     0, 0, 0;
 		     0, 0, 0, 0, ti^2*x(6)*exp(-x(5)*ti), -ti * exp(-x(5)*ti);
 		     0, 0, 0, 0,          -ti*exp(-x(5)*ti),    0              ];
-             Hiel = Hiel + 2 * ( Jiel * Jiel.' + riel * Hi );
+            Hiel = Hiel + 2 * ( Jiel * Jiel.' + riel * Hi );
 	 end
       end
    end

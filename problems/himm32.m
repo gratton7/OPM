@@ -16,9 +16,7 @@ function  varargout = himm32( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
-problem = str2func( pname );
+pname   = 'himm32';
 
 switch ( action )
 
@@ -55,7 +53,7 @@ case 'elobjf' % varargout = [ fiel, giel, Hiel ]
          varargout{3} = sparse( 4, 4 );
       end
    end
-   a    = [ 0 0.000428 0.001000 0.001610 0.002090 0.003480 0.005250 ];
+%  a    = [ 0  0.000428 0.001000 0.001610 0.002090 0.003480 0.005250 ];
    a    = [ 1  0.000428 0.001000 0.001610 0.002090 0.003480 0.005250 ];
    b    = [ 7.391 11.18 16.44 16.20 22.20 24.02 31.32 ];
    for i = 1:1

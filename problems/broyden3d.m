@@ -71,7 +71,6 @@ case 'objf'   % varargout = [ f, g, H ]
 
 case 'elobjf' % varargout = [ fiel, giel, Hiel ]
 
-   iel  = varargin{1};
    x    = varargin{2};
    riel  = ( 3 - 2*x(2) )*x(2) - x(1) - 2*x(3) + 1;
    varargout{1} = riel^2;

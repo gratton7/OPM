@@ -14,8 +14,7 @@ function  varargout = recipe( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname   = 'recipe';
 
 switch ( action )
 
@@ -44,7 +43,6 @@ case 'objf'   % varargout = [ f, g, H ]
 
 case { 'elobjf' }   % varargout = [ f, g, H ]
 
-   iel   = varargin{1};
    x     = varargin{2};
    r1    = x(1)-5;
    r2    = x(2);

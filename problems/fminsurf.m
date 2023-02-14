@@ -131,7 +131,6 @@ case 'objf'   % varargout = [ f, g, H ]
 
 case 'elobjf' % varargout = [ fiel, giel, Hiel ]
 
-   iel   = varargin{1};
    x     = varargin{2};
    n     = varargin{3};
    if ( length( x ) == 4 )

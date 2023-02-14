@@ -69,9 +69,7 @@ case 'objf'   % varargout = [ f, g, H ]
 
 case 'elobjf' % varargout = [ fiel, giel, Hiel ]
 
-   iel  = varargin{1};
    x    = varargin{2};
-   n    = varargin{3};
    fiel = cos( x(1)^2 - 0.5*x(2) );
    varargout{1} = fiel;
    if ( nargout > 1 )

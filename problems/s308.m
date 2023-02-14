@@ -54,7 +54,6 @@ case 'elobjf' % varargout = [ fiel, giel, Hiel ]
 
    iel   = varargin{1};
    x     = varargin{2};
-   n     = length( x );
    switch( iel )
    case 1
       riel = x(1)^2 + x(1)*x(2) + x(2)^2;

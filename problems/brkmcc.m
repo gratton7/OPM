@@ -51,7 +51,6 @@ case 'objf'   % varargout = [ f, g, H ]
 
 case 'elobjf' % varargout = [ fiel, giel, Hiel ]
 
-   iel  = varargin{1};
    x    = varargin{2};
    px   = -0.25*x(1)^2 - x(2)^2 + 1;
    hx   = x(1) - 2*x(2) + 1;

@@ -26,9 +26,7 @@ function  varargout = powr( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
-problem = str2func( pname );
+pname   = 'powr';
 
 switch ( action )
 
@@ -65,7 +63,6 @@ case 'objf'   % varargout = [ f, g, H ]
 
 case 'elobjf'   % varargout = [ f, g, H ]
 
-   iel = varargin{1};
    x   = varargin{2};
    n   = length(x);
    r   = [ 1:n ]*(x.^2);

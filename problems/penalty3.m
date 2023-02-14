@@ -77,8 +77,9 @@ case 'elobjf' % varargout = [ fiel, giel, Hiel ]
       en = exp(x(n));
       varargout{1} = a*(1+R*en);
       if ( nargout > 1 )
+         Jr = zeros( n, n-2 );
          for i = 1:n-2
-            Jr(1:n,i)= [zeros(i-1,1);1;2;10;zeros(n-i-2,1)];
+            Jr(1:n,i) = [zeros(i-1,1);1;2;10;zeros(n-i-2,1)];
 	 end
          gR = 2*Jr*r;
          varargout{2} = a*(gR*en+R*[zeros(n-1,1);en]);
@@ -95,6 +96,7 @@ case 'elobjf' % varargout = [ fiel, giel, Hiel ]
       enm1 = exp(x(n-1));
       varargout{1} = a*S*enm1;
       if ( nargout > 1 )
+         Js = zeros( n, n-2 );
          for i = 1:n-2
             Js(1:n,i)= [zeros(i-1,1);2;1;zeros(n-i-1,1)];
 	 end
@@ -104,7 +106,7 @@ case 'elobjf' % varargout = [ fiel, giel, Hiel ]
 	    varargout{3} = 2*a*enm1*Js*Js.';
 	    varargout{3}(n-1,1:n) = varargout{3}(n-1,1:n)+a*gS.'*enm1;
 	    varargout{3}(1:n,n-1) = varargout{3}(1:n,n-1)+a*gS*enm1;
-	    varargout{3}(n-1,n-1) = varargout{3}(n-1,n-1)  +a*S*enm1;
+	    varargout{3}(n-1,n-1) = varargout{3}(n-1,n-1)+a*S*enm1;
 	 end
       end
    case 3
@@ -114,10 +116,12 @@ case 'elobjf' % varargout = [ fiel, giel, Hiel ]
       S    = sum( s.^2 );
       varargout{1} = a*R*S;
       if ( nargout > 1 )
+         Jr = zeros( n, n-2 );
          for i = 1:n-2
             Jr(1:n,i)= [zeros(i-1,1);1;2;10;zeros(n-i-2,1)];
 	 end
          gR = 2*Jr*r;
+         Js = zeros( n, n-2 );
          for i = 1:n-2
             Js(1:n,i)= [zeros(i-1,1);2;1;zeros(n-i-1,1)];
 	 end
@@ -136,7 +140,6 @@ case 'elobjf' % varargout = [ fiel, giel, Hiel ]
          Jv = 2*diag(x);
 	 varargout{2} = 2*Jv*v;
          if ( nargout > 2 )
-	    Hv = 2*eye(n);
 	    varargout{3} = 2 * ( Jv*Jv.'+ 2*diag(v) );
 	 end
       end

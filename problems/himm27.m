@@ -19,10 +19,6 @@ function  varargout = himm27( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
-problem = str2func( pname );
-
 switch ( action )
 
 case 'setup' % varargout = [ x0, fstar, xtype, xlower, xupper, clower, cupper, class, error ]
@@ -38,7 +34,7 @@ case 'setup' % varargout = [ x0, fstar, xtype, xlower, xupper, clower, cupper, c
 
 case 'cpsstr'
 
-   cpsstr.name  = pname;
+   cpsstr.name  ='himm27';
    cpsstr.eldom = { [ 1 2 ] };
    cpsstr.param = {};
    varargout{1} = cpsstr;

@@ -57,6 +57,7 @@ case 'cpsstr'
    n   = varargin{1};
    m   = ( n - 2 ) / 2;
    iel = 1;
+   eldom = cell( m+4, 1 );
    for i = 1:m
       eldom{ iel }   = [ 2*i-1   2*i ];
       eldom{ iel+1 } = [ 2*i   2*i+1 ];

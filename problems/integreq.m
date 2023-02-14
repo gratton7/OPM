@@ -22,9 +22,7 @@ function  varargout = integreq( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
-problem = str2func( pname );
+pname   = 'integreq';
 
 switch ( action )
 
@@ -62,7 +60,6 @@ case 'objf'   % varargout = [ f, g, H ]
 
 case 'elobjf' % varargout = [ fiel, giel, Hiel ]
 
-   iel  = varargin{1};
    x    = varargin{2};
    n    = varargin{3};
    varargout{1} = 0;
@@ -87,7 +84,7 @@ case 'elobjf' % varargout = [ fiel, giel, Hiel ]
          varargout{2} = varargout{2} + 2 * Ji * ri;
          if ( nargout > 2 )
 	    Hi = sparse( n, n );
-	    Hi = 3*diag([(1-ti)*t(1:i).*xtmp(1:i); ti*(ones(n-i,1)-t(i+1:n)).*xtmp(i+1:n)] );
+	    Hi = Hi+3*diag([(1-ti)*t(1:i).*xtmp(1:i); ti*(ones(n-i,1)-t(i+1:n)).*xtmp(i+1:n)] );
 	    varargout{3} = varargout{3} + 2 * ( Ji * Ji.' + ri * Hi );
 	 end
       end

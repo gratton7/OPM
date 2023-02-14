@@ -18,8 +18,7 @@ function  varargout = shydc20ls( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname   = 'shydc20ls';
 problem = str2func( pname );
 nn      = 20;
 mm      = 3;
@@ -34,8 +33,6 @@ case 'setup' % varargout = [ x0, fstar, xtype, xlower, xupper, clower, cupper, c
       if ( n ~= 99 )
          disp( [ ' ERROR in shydc20ls: n = ', int2str(n), ' is not equal to 99!' ] )
       end
-   else
-      n = 99;
    end
 
 %   Note: the correspondance between the SIF file variables and the present
@@ -80,7 +77,7 @@ case 'setup' % varargout = [ x0, fstar, xtype, xlower, xupper, clower, cupper, c
 
 case 'cpsstr'
 
-   n = varargin{1};        % the number of discretization points
+%   n = varargin{1};        % the number of discretization points
 
    iel = 1;
    for j = 1:mm     % 2.1-(j):  X(0,J) X(1,J) T(0)      V(0)
@@ -140,12 +137,12 @@ case 'elobjf' % varargout = [ fiel, giel, Hiel ]
    be2 = [     0        0         0   ];
 %  fl  = [   30.0     30.0      40.0  ];
 %  fv  = [     0        0         0   ];
-   tf  = 100;
    bb  = 40;
    d   = 60;
    q   = 2500000.0;
    smallHF = 0;
    bigHF   = 0;
+%   tf  = 100;
 %   for j = 1:mm
 %     smallHF = smallHF + fl(j)*( al(j)+al1(j)*tf+al2(j)*tf^2);
 %     bigHF   = bigHF   + fv(j)*(be(j)+be1(j)*tf+ be2(j)*tf^2);
@@ -220,7 +217,7 @@ case 'elobjf' % varargout = [ fiel, giel, Hiel ]
 	 varargout{3}    = 2*(Jiel*Jiel' + riel*Hiel);
       end
    elseif ( iel <= mm*nn )
-      i = floor( ( iel-2*mm)/mm );
+%      i = floor( ( iel-2*mm)/mm );
 %      if ( i == kk )
 %         riel = - fl(j);
 %      elseif ( i == kk+1 )
@@ -282,7 +279,7 @@ case 'elobjf' % varargout = [ fiel, giel, Hiel ]
 	 varargout{3}    = 0.0002*(Jiel*Jiel' + riel*Hiel);
       end
     elseif ( iel <= (mm+1)*nn )
-      i = iel-mm*nn;
+%i = iel-mm*nn;
       switch( nargout )
       case 1
          riel = -1;

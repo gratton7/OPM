@@ -43,8 +43,8 @@ case 'setup' % varargout = [ x0, fstar, xtype, xlower, xupper, clower, cupper, c
       n   = 16;
       nsq = 4;
    end
-   nsqm1      = nsq - 1;
-   h          = 1 / nsqm1;
+%   nsqm1      = nsq - 1;
+%   h          = 1 / nsqm1;
    x0         = zeros( n, 1 );
    xlower     = -Inf * ones( n, 1 );
    xupper     =  Inf * ones( n, 1 );
