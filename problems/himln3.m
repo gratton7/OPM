@@ -16,8 +16,7 @@ function  varargout = himln3( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname   = 'himln3';
 problem = str2func( pname );
 
 switch ( action )

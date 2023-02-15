@@ -44,8 +44,7 @@ function varargout = tnlminsurfx( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname   = 'tnlminsurfx';
 problem = str2func( pname );
 
 switch ( action )

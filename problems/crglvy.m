@@ -26,9 +26,7 @@ function  varargout = crglvy( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-st      = dbstack;
-pname   = st.name;
+pname   = 'crglvy';
 problem = str2func( pname );
 
 switch ( action )

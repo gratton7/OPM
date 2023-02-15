@@ -17,8 +17,7 @@ function  varargout = sensors( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname   = 'sensors';
 problem = str2func( pname );
 
 switch( action )

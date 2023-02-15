@@ -25,8 +25,7 @@ function  varargout = trigger( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname   = 'trigger';
 problem = str2func( pname );
 
 switch ( action )

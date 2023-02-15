@@ -21,8 +21,7 @@ function  varargout = sisser( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname   = 'sisser';
 problem = str2func( pname );
 
 switch ( action )

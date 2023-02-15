@@ -22,8 +22,7 @@ function  varargout = vardim( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname   = 'vardim';
 problem = str2func( pname );
 
 switch ( action )

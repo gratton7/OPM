@@ -19,8 +19,7 @@ function  varargout = nzf1( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname   = 'nzf1';
 problem = str2func( pname );
 
 switch ( action )

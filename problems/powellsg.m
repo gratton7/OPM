@@ -22,8 +22,7 @@ function  varargout = powellsg( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname   = 'powellsg';
 problem = str2func( pname );
 
 switch ( action )

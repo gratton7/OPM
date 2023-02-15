@@ -13,8 +13,7 @@ function  varargout = s308( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname   = 's308';
 problem = str2func( pname );
 
 switch ( action )

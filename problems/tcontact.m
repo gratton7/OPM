@@ -58,8 +58,7 @@ function varargout = tcontact( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname   = 'tcontact';
 problem = str2func( pname );
 
 switch ( action )

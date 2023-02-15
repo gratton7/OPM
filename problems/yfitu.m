@@ -15,8 +15,7 @@ function  varargout = yfitu( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname   = 'yfitu';
 problem = str2func( pname );
 
 switch ( action )

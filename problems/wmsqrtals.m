@@ -20,8 +20,7 @@ function  varargout = wmsqrtals( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname   = 'wmsqrtals';
 problem = str2func( pname );
 
 switch ( action )

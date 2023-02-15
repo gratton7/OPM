@@ -19,8 +19,7 @@ function  varargout = powellsq( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname = 'powellsq';
 
 switch ( action )
 

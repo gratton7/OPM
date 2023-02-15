@@ -45,8 +45,7 @@ function varargout = tlminsurf( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname   = 'tlminsurf';
 problem = str2func( pname );
 
 switch ( action )

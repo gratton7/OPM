@@ -24,8 +24,7 @@ function  varargout = watson( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname   = 'watson';
 problem = str2func( pname );
 
 switch ( action )

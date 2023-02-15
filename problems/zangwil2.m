@@ -16,8 +16,7 @@ function  varargout = zangwil2( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname   = 'zangwil2';
 problem = str2func( pname );
 
 switch ( action )

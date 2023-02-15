@@ -22,8 +22,7 @@ function  varargout = kowosb( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname = 'kowosb';
 
 switch ( action )
 

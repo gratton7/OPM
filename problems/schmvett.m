@@ -25,8 +25,7 @@ function  varargout = schmvett( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname   = 'schmvett';
 problem = str2func( pname );
 
 switch ( action )

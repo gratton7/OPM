@@ -26,8 +26,7 @@ function  varargout = morebv( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname   = 'morebv';
 problem = str2func( pname );
 
 switch ( action )

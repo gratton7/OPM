@@ -23,8 +23,7 @@ function  varargout = nondia( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname   = 'nondia';
 problem = str2func( pname );
 
 switch ( action )

@@ -16,8 +16,7 @@ function  varargout = zangwil3( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname = 'zangwil3';
 
 switch ( action )
 

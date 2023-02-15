@@ -23,8 +23,7 @@ function  varargout = tridia( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname   = 'tridia';
 problem = str2func( pname );
 
 switch ( action )

@@ -20,8 +20,7 @@ function  varargout = jensmp( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname = 'jensmp';
 
 switch ( action )
 

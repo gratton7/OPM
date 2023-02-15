@@ -21,8 +21,7 @@ function  varargout = meyer3( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname   = 'meyer3';
 problem = str2func( pname );
 
 switch ( action )

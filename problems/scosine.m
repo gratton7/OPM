@@ -17,8 +17,7 @@ function  varargout = scosine( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname   = 'scosine';
 problem = str2func( pname );
 
 switch ( action )

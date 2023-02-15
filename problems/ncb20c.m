@@ -15,8 +15,7 @@ function  varargout = ncb20c( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname   = 'ncb20c';
 problem = str2func( pname );
 p       = 20;
 ny      = 10;

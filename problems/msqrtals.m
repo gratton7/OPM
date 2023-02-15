@@ -19,8 +19,7 @@ function  varargout = msqrtals( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname   = 'msqrtals';
 problem = str2func( pname );
 
 switch ( action )

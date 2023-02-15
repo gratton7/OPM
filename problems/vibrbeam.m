@@ -30,8 +30,7 @@ function  varargout = vibrbeam( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname   = 'vibrbeam';
 problem = str2func( pname );
 
 switch ( action )

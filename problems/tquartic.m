@@ -18,8 +18,7 @@ function  varargout = tquartic( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname   = 'tquartic';
 problem = str2func( pname );
 
 switch ( action )

@@ -17,8 +17,7 @@ function  varargout = heart8ls( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname   = 'heart8ls';
 problem = str2func( pname );
 
 switch ( action )

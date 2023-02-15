@@ -16,8 +16,7 @@ function  varargout = scurly10( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname   = 'scurly10';
 problem = str2func( pname );
 smb     = 10;  % semibandwidth
 scl     = 12;  % the range of scales

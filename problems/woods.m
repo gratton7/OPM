@@ -30,8 +30,7 @@ function  varargout = woods( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname   = 'woods';
 problem = str2func( pname );
 
 switch ( action )

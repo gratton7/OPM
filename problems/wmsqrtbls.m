@@ -20,8 +20,7 @@ function  varargout = wmsqrtbls( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname   = 'wmsqrtbls';
 problem = str2func( pname );
 
 switch ( action )

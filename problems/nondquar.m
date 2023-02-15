@@ -23,8 +23,7 @@ function  varargout = nondquar( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname   = 'nondquar';
 problem = str2func( pname );
 
 switch ( action )

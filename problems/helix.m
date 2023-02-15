@@ -23,8 +23,7 @@ function  varargout = helix( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname   = 'helix';
 problem = str2func( pname );
 
 switch ( action )

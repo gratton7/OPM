@@ -25,8 +25,7 @@ function  varargout = penalty1( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname   = 'penalty1';
 problem = str2func( pname );
 
 switch ( action )

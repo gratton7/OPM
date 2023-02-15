@@ -21,8 +21,7 @@ function  varargout = osborneb( action, varargin )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-st      = dbstack;
-pname   = st.name;
+pname   = 'osborneb';
 problem = str2func( pname );
 
 switch ( action )
