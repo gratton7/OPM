@@ -31,7 +31,9 @@ case 'setup' % varargout = [ x0, fstar, xtype, xlower, xupper, clower, cupper, c
    else
       n = 30;
    end
-   varargout{1} = (1/n)*ones( n , 1 );          % x0
+   for i =1:n
+      varargout{1}(i) = -(0.1/(n+1))*i^2;        % x0
+   end
    varargout{2} = 'unknown';                    % fstar
    varargout{3} = '';                           % xtype
    varargout{4} = [ 0; -Inf*ones(n-2,1); 0 ];   % xlower
@@ -109,14 +111,14 @@ case 'elobjf' % varargout = [ fiel, giel, Hiel ]
 	 dexdx2 = dex/dx2;
          varargout{2} = 2*lambda*h*[  dexdx2-e1/dx; -dexdx2+e2/dx ];
          if ( nargout > 2 )
-	    dx3     = dx^3;
-	    dexdx3  = dex/dx3;
-	    H(1,1) = -e1/dx-2*(e1/dx2 -dexdx3);
-	    H(2,1) = (e1+e2)/dx2-2*dexdx3;
-	    H(1,2) = H(2,1);
-	    H(2,2) = e2/dx - 2*(e2/dx2 - dexdx3 );
-	    varargout{3} = 2*lambda*h*H;
-	 end
+	        dx3     = dx^3;
+	        dexdx3  = dex/dx3;
+	        H(1,1) = -e1/dx-2*(e1/dx2 -dexdx3);
+	        H(2,1) = (e1+e2)/dx2-2*dexdx3;
+	        H(1,2) = H(2,1);
+	        H(2,2) = e2/dx - 2*(e2/dx2 - dexdx3 );
+	        varargout{3} = 2*lambda*h*H;
+	     end
       end
    end
 
